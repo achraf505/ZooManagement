@@ -1,13 +1,13 @@
 package tn.esprit.gestionzoo.entities;
 
- public class Aquatic extends Animal {
-    protected String habitat;
-
-    public Aquatic() { super("Unknown Aquatic"); this.habitat = "Unknown"; }
-    public Aquatic(String name, String habitat) { super(name); this.habitat = habitat; }
-
-    public void swim() { System.out.println("This aquatic animal is swimming."); }
+public class Aquatic implements Carnivore<Food> {
 
     @Override
-    public String toString() { return "Aquatic [name=" + name + ", habitat=" + habitat + "]"; }
+    public void eatMeat(Food meat) {
+        if (meat == Food.MEAT || meat == Food.BOTH) {
+            System.out.println("L'animal aquatique mange de la viande.");
+        } else {
+            System.out.println("L'animal aquatique ne mange pas de plantes.");
+        }
+    }
 }

@@ -4,22 +4,21 @@ import tn.esprit.gestionzoo.entities.*;
 
 public class ZooManagement {
     public static void main(String[] args) {
-        Zoo zoo = new Zoo("Belv", "Tunis");
+        Aquatic poisson = new Aquatic();
+        Penguin pingouin = new Penguin();
+        Terrestrial lion = new Terrestrial();
 
-        Dolphin dolphin = new Dolphin("Flipper", "Sea", 30.5f);
-        Penguin penguin = new Penguin("Pingu", "Antarctica", 15.0f);
-        Aquatic aquatic = new Aquatic("Nemo", "Ocean");
+        System.out.println("=== Test Prosit 8 ===");
+        poisson.eatMeat(Food.MEAT);
+        pingouin.eatMeat(Food.MEAT);
+        lion.eatMeat(Food.MEAT);
+        lion.eatPlant(Food.PLANT);
+        lion.eatPlantAndMeat(Food.BOTH);
 
-        zoo.addAnimal(dolphin);
-        zoo.addAnimal(penguin);
-        zoo.addAnimal(aquatic);
-
-        zoo.displayAnimals();
-
-        aquatic.swim();
-        dolphin.swim();
-        penguin.swim();
+        Aquatic a = new Penguin();
+        a.eatMeat(Food.MEAT);
     }
 }
+
 
 
