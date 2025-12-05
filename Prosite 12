@@ -1,0 +1,5 @@
+Ce projet contient la gestion des étudiants avec Java, incluant :
+- La classe `Etudiant`
+- L'interface `Management`
+- La classe `StudentManagement`
+- Un exemple de `Main` pour tester les fonctionnalités
